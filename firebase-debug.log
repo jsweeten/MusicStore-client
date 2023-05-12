@@ -1,0 +1,21 @@
+[debug] [2023-05-12T15:49:19.505Z] ----------------------------------------------------------------------
+[debug] [2023-05-12T15:49:19.506Z] Command:       C:\program files\nodejs\node.exe C:\Users\Jay\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-12T15:49:19.507Z] CLI Version:   12.0.0
+[debug] [2023-05-12T15:49:19.507Z] Platform:      win32
+[debug] [2023-05-12T15:49:19.507Z] Node Version:  v18.16.0
+[debug] [2023-05-12T15:49:19.508Z] Time:          Fri May 12 2023 10:49:19 GMT-0500 (Central Daylight Time)
+[debug] [2023-05-12T15:49:19.508Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-12T15:49:19.513Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-12T15:49:19.513Z] > authorizing via signed-in user (jtsweeten@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Jay\workspace\FullStack-Projects\MusicStore\MusicStore\client
+
