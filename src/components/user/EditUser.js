@@ -3,7 +3,7 @@
 // import { getUserById, deleteUser, editUserInfo, getAllUserTypes } from "../../modules/authManager";
 // import { Form, FormGroup, InputGroup, FormLabel } from "react-bootstrap"
 
-// export default function EditUser() {
+export default function EditUser() {
 //     const navigate = useNavigate();
 //     const { id } = useParams();
 //     const [ oldUser, setOldUser ] = useState({});
@@ -49,9 +49,9 @@
 //         }
 //     }
 
-//     return (
-//     <>
-//         <section className="input-container">
+    return (
+    <>
+//         { /* <section className="input-container">
 //             <header className="text-black">{oldUser?.firstName} {oldUser?.lastName}</header>
 //         </section>
 //         <Form onSubmit={submitTemplate}>
@@ -112,7 +112,7 @@
 //                     className="input-container bg-danger"
 //                     onClick={deleteFunction}>Delete User</button>
 //             </div>
-//         </Form>
-//     </>
-//     )
-// }
+    //         </Form> */}
+    </>
+    )
+}
