@@ -1,8 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function GuitarHome() {
 
-    const navigate = useNavigate();
     
     return (
         <>

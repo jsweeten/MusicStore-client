@@ -3,7 +3,7 @@ import { Spinner } from "react-bootstrap";
 import AppViews from "./components/AppViews";
 import { BrowserRouter } from "react-router-dom";
 import { onLoginStatusChange } from "./modules/authManager";
-import Nav from './components/Nav';
+import NavHeader from './components/NavHeader';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
@@ -24,7 +24,7 @@ function App() {
       <header className="App-header">
       </header>
       <BrowserRouter>
-        <Nav isLoggedIn={isLoggedIn} />
+        <NavHeader />
         <AppViews isLoggedIn={isLoggedIn} />
       </BrowserRouter>
     </div>

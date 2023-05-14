@@ -10,6 +10,9 @@ import GuitarHome from "./instruments/guitars/GuitarHome";
 import AcousticGuitars from "./instruments/guitars/AcousticGuitars";
 import ElectricGuitars from "./instruments/guitars/ElectricGuitars";
 import InstrumentDetails from "./instruments/InstrumentDetails";
+import BassHome from "./instruments/BassHome";
+import KeyboardHome from "./instruments/KeyboardHome";
+import PercussionHome from "./instruments/PercussionHome";
 
 export default function AppViews({ isLoggedIn }) {
     return (
@@ -17,30 +20,24 @@ export default function AppViews({ isLoggedIn }) {
         <Routes>
           <Route index element={ <Home /> }/>
           <Route path="home" element={ <Home /> }/>
-            <Route path="guitars" element={< GuitarHome />} >
-              <Route path=":id" element={< InstrumentDetails /> }/>
-              <Route path="acoustic" element={ < AcousticGuitars /> }/>
-              <Route path="electric" element={ < ElectricGuitars /> }/>
-            </Route>
-            
+
+          <Route path="guitar" element={< GuitarHome />} />
+          <Route path="guitar/acoustic" element={ < AcousticGuitars /> }/>
+          <Route path="guitar/electric" element={ < ElectricGuitars /> }/>
+
+          <Route path="bass" element={< BassHome />} />
+          <Route path="keyboard" element={< KeyboardHome />} />
+          <Route path="percussion" element={< PercussionHome />} />
   
-            { /* <Route path="category">
-              <Route index
-                element={ isLoggedIn ? <CategoryList /> : <Navigate to="/login" /> }
-              />
-            </Route>
-            <Route path="category/:id" element={ isLoggedIn ? < CategoryDetails /> : <Navigate to="/login" /> } />
-            <Route path="templates/:id" element={ isLoggedIn ? < TemplateForm userProfile={userProfile}/> : <Navigate to="/login" /> } />
-            <Route path="templates/create" element={ isLoggedIn ? < CreateTemplate /> : <Navigate to="/login" /> } />
-            <Route path="templates/edit/:existingTemplateId" element={ isLoggedIn ? < EditTemplate userProfile={userProfile}/> : <Navigate to="/login" /> } /> */}
-  
-            <Route path="users" element={ <ListUsers />} />
-            <Route path="users/:userId" element={< UserDetails />} />
-            <Route path="users/edit/:id" element={< EditUser />} />
-  
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route path="*" element={<p>Whoops, nothing here...</p>} />
+          <Route path=":id" element={< InstrumentDetails /> }/>
+
+          <Route path="users" element={ <ListUsers />} />
+          <Route path="users/:userId" element={< UserDetails />} />
+          <Route path="users/edit/:id" element={< EditUser />} />
+
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="*" element={<p>Whoops, nothing here...</p>} />
         </Routes>
       </main>
     );
