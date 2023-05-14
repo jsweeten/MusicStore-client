@@ -1,9 +1,24 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 main {
-    background-color: #3617104f;
+    background-color: #1315244f;
+    padding: 1rem;
 }
 
 html {
-    background-color: #3617104f;
+    margin: 0;
+    background-color: #1315244f;
+}
+
+.carousel-img {
+    position: static;
+    width: 100% !important;
+    height: 15rem;
+    align-items: center;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.carousel-item {
+    text-align: center;
 }
