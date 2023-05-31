@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getAllGuitars } from "../../../modules/guitarManager";
+import InstrumentCard from "../InstrumentCard";
 
 function GuitarHome() {
     const [ guitars, setGuitars ] = useState([]);
@@ -26,8 +27,7 @@ function GuitarHome() {
             <div className="guitar-container">
                 {guitars.map(g => 
                     <div key={g.id}>
-                        <div>{g.name}</div>
-                        <div>Strings: {g.strings}</div>
+                        <InstrumentCard instrument={g} />
                     </div>
                     )}
             </div>
