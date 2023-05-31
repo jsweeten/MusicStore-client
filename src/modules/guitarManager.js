@@ -1,6 +1,6 @@
 import { getToken } from "./authManager";
 
-const _apiUrl = "/api/guitar";
+const _apiUrl = "/api/Guitar";
 
 // GET ALL
 export const getAllGuitars = () => {
