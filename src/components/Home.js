@@ -1,11 +1,24 @@
 import Carousel from 'react-bootstrap/Carousel';
 import placeholder from "../assets/Icon-Placeholder-1.png";
-import drum_floor from "../assets/drum-floor.jpg";
-import acoustic_room from "../assets/acoustic-room.jpg";
-import amp_display from "../assets/amp-display.jpg";
-
+import drum_floor from "../assets/home-carousel/drum-floor.jpg";
+import acoustic_room from "../assets/home-carousel/acoustic-room.jpg";
+import amp_display from "../assets/home-carousel/amp-display.jpg";
+import InstrumentCard from './instruments/InstrumentCard';
+import { getAllGuitars } from '../modules/guitarManager';
+import { useState, useEffect } from "react";
+import { CardGroup } from 'react-bootstrap';
 
 function Home() {
+    const [ guitars, setGuitars ] = useState([]);
+
+    const getGuitars = () => {
+        getAllGuitars().then(data => setGuitars(data))
+    }
+
+    useEffect(() => {
+        getGuitars()
+    }, []);
+    
     return (
         <>    
             <header className="text-center">
@@ -54,8 +67,22 @@ function Home() {
 
             <section>
                 <p>New Arrivals</p>
+                <CardGroup className="card-container">
+                    {guitars.map(g => 
+                        <div key={g.id}>
+                            <InstrumentCard instrument={g} />
+                        </div>
+                    )}
+                </CardGroup>
                 <p>Clearance</p>
                 <p>Guitar</p>
+                <CardGroup className="card-container">
+                {guitars.map(g => 
+                    <div key={g.id}>
+                        <InstrumentCard instrument={g}/>
+                    </div>
+                )}
+                </CardGroup>
                 <p>Keyboard</p>
             </section>
         </>
