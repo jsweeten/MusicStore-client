@@ -1,11 +1,13 @@
 import { getToken } from "./authManager";
 
 const _apiUrl = "/api/Guitar";
+const img_db = "localhost:1433/data/guitars";
 
 // GET ALL
 export const getAllGuitars = () => {
     return fetch(_apiUrl)
     .then(res => res.json())
+    // .then(g => g.imagePath = `${img_db}/${g.imagePath}`)
 }
 
 
